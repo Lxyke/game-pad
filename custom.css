@@ -1,33 +1,37 @@
-/* BEGIN Custom PS5 Controller Base with PS4 Button Overlays - adjusted to 671x452 */
-
+/* Base controller with your 800x800 PNG */
 .controller.ds4 {
-    background: url('https://lxyke.github.io/game-pad/my_controller.png');
-    height: 452px;
-    width: 671px;
-    /* adjust margin if needed */
+    background: url('https://i.imgur.com/v4Y7lLt.png'); /* Your uploaded controller image */
+    height: 800px !important;  
+    width: 800px !important;   
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    position: relative !important;
 }
 
+/* Disconnected controller image - keep original or customize */
 .ds4.disconnected {
-    background: url('https://imgur.com/Ng32O1o.png');
+    background: url(https://imgur.com/Ng32O1o.png);
 }
 
 .ds4.disconnected div {
     display: none;
 }
 
-/* Triggers */
+/* Triggers container and triggers */
 .ds4 .triggers {
-    width: 490px; /* approx 671 * (588/806) */
-    height: 67px; /* approx 452 * (90/598) */
+    width: 588px;
+    height: 90px;
     position: absolute;
-    left: 91px; /* approx 109 * (671/806) */
-    top: 0;
+    left: 109px;
 }
 
 .ds4 .trigger {
-    width: 82px; /* approx 99 * (671/806) */
+    width: 99px;
     height: 100%;
-    background: url('https://imgur.com/kmSUTH5.png');
+    background: url(https://imgur.com/kmSUTH5.png);
     opacity: 0;
 }
 
@@ -37,23 +41,23 @@
 
 .ds4 .trigger.right {
     float: right;
-    background-position-x: 82px;
+    background-position-x: 99px;
 }
 
 /* Bumpers */
 .ds4 .bumper {
-    width: 82px; /* approx 99 * (671/806) */
-    height: 16px; /* approx 23 * (452/598) */
-    background: url('https://imgur.com/tWX4j9c.png') no-repeat;
+    width: 99px;
+    height: 23px;
+    background: url(https://imgur.com/tWX4j9c.png) no-repeat;
     opacity: 0;
 }
 
 .ds4 .bumpers {
     position: absolute;
-    width: 490px; /* same as triggers width */
-    height: 16px;
-    left: 91px;
-    top: 70px; /* approx 94 * (452/598) */
+    width: 588px;
+    height: 23px;
+    left: 109px;
+    top: 94px;
 }
 
 .ds4 .bumper.pressed {
@@ -71,44 +75,35 @@
 
 /* Touchpad */
 .ds4 .touchpad {
-    width: 218px; /* approx 262 * (671/806) */
-    height: 114px; /* approx 151 * (452/598) */
+    width: 262px;
+    height: 151px;
     position: absolute;
-    left: 225px; /* approx 272 * (671/806) */
-    top: 93px;  /* approx 122 * (452/598) */
+    left: 272px;
+    top: 122px;
 }
 
 .ds4 .touchpad.pressed {
-    background: url('https://imgur.com/bAw0JK6.png') no-repeat center;
+    background: url(https://imgur.com/bAw0JK6.png) no-repeat center;
 }
 
 /* Meta button */
 .ds4 .meta {
-    width: 34px; /* approx 42 * (671/806) */
-    height: 32px; /* approx 42 * (452/598) */
+    width: 42px;
+    height: 42px;
     position: absolute;
-    left: 318px; /* approx 382 * (671/806) */
-    bottom: 163px; /* approx 216 * (452/598) */
+    left: 382px;
+    bottom: 216px;
 }
 
 .ds4 .meta.pressed {
-    background: url('https://imgur.com/2TAywLD.png') no-repeat center;
-}
-
-/* Arrows container */
-.ds4 .arrows {
-    position: absolute;
-    width: 293px; /* approx 352 * (671/806) */
-    height: 35px;  /* approx 46 * (452/598) */
-    top: 107px;    /* approx 142 * (452/598) */
-    left: 186px;   /* approx 227 * (671/806) */
+    background: url(https://imgur.com/2TAywLD.png) no-repeat center;
 }
 
 /* Back and Start buttons */
 .ds4 .back, .ds4 .start {
-    background: url('https://imgur.com/s8zdOmr.png');
-    width: 22px; /* approx 28 * (671/806) */
-    height: 35px; /* approx 46 * (452/598) */
+    background: url(https://imgur.com/s8zdOmr.png);
+    width: 28px;
+    height: 46px;
     opacity: 0;
 }
 
@@ -122,73 +117,75 @@
 
 .ds4 .start {
     float: right;
-    background-position: 22px 0;
+    background-position: 28px 0;
 }
 
-/* ABXY Buttons */
+/* ABXY buttons container */
 .ds4 .abxy {
     position: absolute;
-    width: 142px;  /* approx 170 * (671/806) */
-    height: 121px; /* approx 171 * (452/598) */
-    top: 119px;    /* approx 159 * (452/598) */
-    left: 471px;   /* approx 567 * (671/806) */
+    width: 170px;
+    height: 171px;
+    top: 159px;
+    left: 567px;
 }
 
+/* ABXY buttons */
 .ds4 .button {
     position: absolute;
-    width: 46px;  /* approx 55 * (671/806) */
-    height: 42px; /* approx 55 * (452/598) */
-    background: url('https://imgur.com/imUQtwz.png');
+    width: 55px;
+    height: 55px;
+    background: url(https://imgur.com/imUQtwz.png);
 }
 
 .ds4 .button.pressed {
-    background-position-y: 42px;
+    background-position-y: 55px;
 }
 
 .ds4 .a {
     background-position: 0 0;
     bottom: 0;
-    left: 49px; /* approx 58 * (671/806) */
+    left: 58px;
 }
 
 .ds4 .b {
-    background-position: -46px 0;
-    top: 46px; /* approx 58 * (452/598) */
+    background-position: -57px 0;
+    top: 58px;
     right: 0px;
 }
 
 .ds4 .x {
-    background-position: -91px 0;
-    top: 46px;
+    background-position: -113px 0;
+    top: 58px;
 }
 
 .ds4 .y {
-    background-position: 44px 0;
-    left: 49px;
+    background-position: 55px 0;
+    left: 58px;
+}
+
+/* Sticks container */
+.ds4 .sticks {
+    position: absolute;
+    width: 361px;
+    height: 105px;
+    top: 308px;
+    left: 228px;
 }
 
 /* Sticks */
-.ds4 .sticks {
-    position: absolute;
-    width: 301px; /* approx 361 * (671/806) */
-    height: 79px; /* approx 105 * (452/598) */
-    top: 233px;   /* approx 308 * (452/598) */
-    left: 188px;  /* approx 228 * (671/806) */
-}
-
 .ds4 .stick {
     position: absolute;
-    background: url('https://imgur.com/WM1PmtA.png');
-    height: 71px; /* approx 94 * (452/598) */
-    width: 78px;  /* approx 94 * (671/806) */
+    background: url(https://imgur.com/WM1PmtA.png);
+    height: 94px;
+    width: 94px;
 }
 
 .ds4 .stick.pressed.left {
-    background-position-x: -79px;
+    background-position-x: -96px;
 }
 
 .ds4 .stick.pressed.right {
-    background-position-x: -158px;
+    background-position-x: -192px;
 }
 
 .ds4 .stick.left {
@@ -197,70 +194,64 @@
 }
 
 .ds4 .stick.right {
-    top: calc(100% - 79px);
-    left: calc(100% - 78px);
+    top: calc(100% - 105px);
+    left: calc(100% - 105px);
 }
 
-/* D-Pad */
+/* D-pad container */
 .ds4 .dpad {
     position: absolute;
-    width: 104px; /* approx 125 * (671/806) */
-    height: 95px;  /* approx 126 * (452/598) */
-    top: 137px;    /* approx 181 * (452/598) */
-    left: 77px;    /* approx 92 * (671/806) */
+    width: 125px;
+    height: 126px;
+    top: 181px;
+    left: 92px;
 }
 
-/* Face buttons */
+/* D-pad face buttons */
 .ds4 .face {
-    background: url('https://imgur.com/JUJK0Z7.png');
+    background: url(https://imgur.com/JUJK0Z7.png);
     position: absolute;
 }
 
 .ds4 .face.up, .ds4 .face.down {
-    width: 29px;  /* approx 36 * (671/806) */
-    height: 39px; /* approx 52 * (452/598) */
+    width: 36px;
+    height: 52px;
 }
 
 .ds4 .face.left, .ds4 .face.right {
-    width: 43px;  /* approx 52 * (671/806) */
-    height: 27px; /* approx 36 * (452/598) */
+    width: 52px;
+    height: 36px;
 }
 
 .ds4 .face.up {
-    left: 37px;   /* approx 44 * (671/806) */
+    left: 44px;
     top: 0;
-    background-position: -30px 0px;
+    background-position: -37px 0px;
 }
 
 .ds4 .face.down {
-    left: 37px;
+    left: 44px;
     bottom: 0;
     background-position: 0px 0;
 }
 
 .ds4 .face.left {
-    top: 34px;   /* approx 45 * (452/598) */
+    top: 45px;
     left: 0;
-    background-position: 74px 0;
+    background-position: 104px 0;
 }
 
 .ds4 .face.right {
-    top: 34px;
+    top: 45px;
     right: 0px;
-    background-position: 37px 0;
+    background-position: 52px 0;
 }
 
 .ds4 .face.pressed {
-    background-position-y: 39px;
+    background-position-y: 52px;
 }
 
-.ds4.half {
-    margin-top: -300px;
-}
-
-/* END Custom PS5 Controller Base with PS4 Button Overlays */
-
-/* Optional: black background behind controller */
+/* Optional: page background */
 body {
     background-color: black !important;
 }
