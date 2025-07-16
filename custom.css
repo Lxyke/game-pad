@@ -1,41 +1,113 @@
-/* Use your custom base controller image as the background */
+/* Set your custom base controller image as background */
 .controller.custom {
-  background: url('https://yourdomain.github.io/path/to/your_controller.png') no-repeat center center !important;
+  background: url('https://lxyke.github.io/game-pad/my_controller.png') no-repeat center center !important;
   background-size: contain !important;
-  width: 671px !important;  /* match your image size */
+  width: 671px !important;
   height: 452px !important;
   position: relative !important;
   margin: 0 auto !important;
 }
 
-/* Hide only the default base controller image (usually an <img> tag) */
+/* Hide the default base controller image */
 .controller.custom > img.controller {
   display: none !important;
 }
 
-/* Do NOT hide the buttons, sticks, dpads, etc. — so they stay visible and animate */
-/* If you previously hid all images and divs like this, remove or comment out: */
-/*
-.controller.custom img,
-.controller.custom div {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-*/
-
-/* Optionally, adjust positions of sticks, buttons, dpads to fit your custom base */
-.controller.custom .sticks {
-  top: 460px !important; /* adjust these values to fit your image */
-  left: 230px !important;
-}
-
-.controller.custom .dpad {
-  top: 300px !important;
-  left: 90px !important;
-}
-
+/* Make sure buttons, sticks, dpad remain visible */
+.controller.custom .sticks,
+.controller.custom .dpad,
 .controller.custom .abxy {
-  top: 320px !important;
-  left: 570px !important;
+  display: block !important;
+  position: absolute !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Adjust sticks container */
+.controller.custom .sticks {
+  top: 280px !important;   /* adjust this */
+  left: 180px !important;  /* adjust this */
+  width: 320px !important;
+  height: 90px !important;
+}
+
+/* Left stick */
+.controller.custom .stick.left {
+  top: 0 !important;
+  left: 0 !important;
+  width: 80px !important;
+  height: 80px !important;
+}
+
+/* Right stick */
+.controller.custom .stick.right {
+  top: 5px !important;
+  left: 240px !important;
+  width: 80px !important;
+  height: 80px !important;
+}
+
+/* D-pad container */
+.controller.custom .dpad {
+  top: 170px !important;
+  left: 70px !important;
+  width: 110px !important;
+  height: 110px !important;
+}
+
+/* D-pad directions */
+.controller.custom .face.up    { top: 0 !important; left: 40px !important; width: 35px !important; height: 35px !important; position: absolute !important; }
+.controller.custom .face.down  { top: 75px !important; left: 40px !important; width: 35px !important; height: 35px !important; position: absolute !important; }
+.controller.custom .face.left  { top: 40px !important; left: 0 !important; width: 35px !important; height: 35px !important; position: absolute !important; }
+.controller.custom .face.right { top: 40px !important; left: 75px !important; width: 35px !important; height: 35px !important; position: absolute !important; }
+
+/* Face buttons container */
+.controller.custom .abxy {
+  top: 180px !important;
+  left: 530px !important;
+  width: 150px !important;
+  height: 150px !important;
+}
+
+/* Face buttons */
+.controller.custom .a {
+  bottom: 0 !important;
+  left: 50px !important;
+  width: 45px !important;
+  height: 45px !important;
+  position: absolute !important;
+}
+.controller.custom .b {
+  top: 50px !important;
+  right: 0 !important;
+  width: 45px !important;
+  height: 45px !important;
+  position: absolute !important;
+}
+.controller.custom .x {
+  top: 50px !important;
+  left: 0 !important;
+  width: 45px !important;
+  height: 45px !important;
+  position: absolute !important;
+}
+.controller.custom .y {
+  left: 50px !important;
+  top: 0 !important;
+  width: 45px !important;
+  height: 45px !important;
+  position: absolute !important;
+}
+
+/* Optional: hide back and start buttons */
+.controller.custom .back,
+.controller.custom .start {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+}
+
+/* Optional: page background */
+body {
+  background-color: black !important;
 }
