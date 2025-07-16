@@ -1,20 +1,21 @@
-/* Hide default GamepadViewer controller image */
+/* ✅ Hides the default PS4 controller image */
 img.controller {
   display: none !important;
 }
 
-/* Use your custom controller image */
+/* ✅ Displays your custom controller image */
 #controller {
-  background: url('https://lxyke.github.io/game-pad/my_controller.png') no-repeat center center;
+  background-image: url('https://lxyke.github.io/game-pad/my_controller.png');
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
   width: 1000px;
-  height: 600px;
-  position: relative;
+  height: 500px;
   margin: 0 auto;
-  image-rendering: pixelated;
+  position: relative;
 }
 
-/* Optional: dark background to match */
+/* Optional: set a dark background */
 body {
   background-color: black;
 }
