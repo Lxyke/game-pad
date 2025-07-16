@@ -1,25 +1,21 @@
-/* ✅ Forcefully hide the default controller image */
-img.controller,
-#controller > img {
+/* Hide any leftover default images or wrappers */
+.custom img.controller,
+.custom #controller > img {
   display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  position: absolute !important;
-  z-index: -9999 !important;
 }
 
-/* ✅ Show your custom image as the background */
-#controller {
-  background: url('https://lxyke.github.io/game-pad/my_controller.png') no-repeat center center;
-  background-size: contain;
-  width: 1000px;
-  height: 600px;
-  margin: 0 auto;
-  position: relative;
-  image-rendering: pixelated;
+/* Show your full‑image background */
+.custom #controller {
+  background: url('https://lxyke.github.io/game-pad/my_controller.png') no-repeat center center !important;
+  background-size: contain !important;
+  width: 1000px !important;
+  height: 600px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  image-rendering: pixelated !important;
 }
 
-/* Optional: dark background */
-body {
-  background-color: black;
+/* (Optional) match the rest of the page */
+.custom body {
+  background-color: black !important;
 }
