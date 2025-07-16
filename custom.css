@@ -1,24 +1,14 @@
-/* 1. Target the “custom” skin class on the controller wrapper */
-.controller.custom {
-  /* Show your PNG as the entire controller */
-  background: url('https://raw.githubusercontent.com/Lxyke/game-pad/main/my_controller.png') 
+/* 1. Hide the default controller container entirely */
+#controller, .controller {
+  display: none !important;
+}
+
+/* 2. Draw your PNG as the page background, centered and contained */
+body {
+  background: url('https://raw.githubusercontent.com/Lxyke/game-pad/main/my_controller.png')
     no-repeat center center !important;
   background-size: contain !important;
-  width: 1000px !important;
-  height: 600px !important;
-  position: relative !important;
-  margin: 0 auto !important;
-}
-
-/* 2. Hide any of the default PS4 art or button overlays */
-.controller.custom img,
-.controller.custom div {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-/* 3. (Optional) Black page behind for contrast */
-body {
+  margin: 0 !important;
+  height: 100vh !important;
   background-color: black !important;
 }
