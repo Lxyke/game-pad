@@ -3,8 +3,6 @@
     background: url(https://i.imgur.com/fW4paqw.png);
     height: 598px;
     width: 806px;
-    /*    margin-left: -403px;
-        margin-top: -280px;*/
 }
 
 .ds4.disconnected {
@@ -122,8 +120,8 @@
     position: absolute;
     width: 170px;
     height: 171px;
-    top: 159px;
-    left: 567px;
+    top: 163px;   /* moved down 4px */
+    left: 569px;  /* moved right 2px */
 }
 
 .ds4 .button {
@@ -192,7 +190,6 @@
     left: calc(100% - 105px);
 }
 
-/* UPDATED D-PAD SECTION */
 .ds4 .dpad {
     position: absolute;
     width: 125px;
@@ -218,24 +215,24 @@
 
 .ds4 .face.up {
     left: 44px;
-    top: 9px;
+    top: 0;
     background-position: -37px 0px;
 }
 
 .ds4 .face.down {
     left: 44px;
-    bottom: -9px;
+    bottom: 0;
     background-position: 0px 0;
 }
 
 .ds4 .face.left {
-    top: 54px;
+    top: 45px;
     left: 0;
     background-position: 104px 0;
 }
 
 .ds4 .face.right {
-    top: 54px;
+    top: 45px;
     right: 0px;
     background-position: 52px 0;
 }
@@ -247,4 +244,5 @@
 .ds4.half {
     margin-top: -300px;
 }
+
 /*END PS4 Controller Styling*/
