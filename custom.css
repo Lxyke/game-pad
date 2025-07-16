@@ -1,12 +1,13 @@
-/* Hide any leftover default images or wrappers */
+/* Hide default art */
 .custom img.controller,
 .custom #controller > img {
   display: none !important;
 }
 
-/* Show your full‑image background */
+/* Show your full‑image background via raw URL */
 .custom #controller {
-  background: url('https://lxyke.github.io/game-pad/my_controller.png') no-repeat center center !important;
+  background: url('https://raw.githubusercontent.com/Lxyke/game-pad/main/my_controller.png')
+    no-repeat center center !important;
   background-size: contain !important;
   width: 1000px !important;
   height: 600px !important;
@@ -15,7 +16,7 @@
   image-rendering: pixelated !important;
 }
 
-/* (Optional) match the rest of the page */
+/* Black page behind */
 .custom body {
   background-color: black !important;
 }
