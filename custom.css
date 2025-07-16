@@ -1,14 +1,8 @@
-/* 1. Hide the default controller container entirely */
-#controller, .controller {
-  display: none !important;
+.controller.custom {
+  background: url('https://i.imgur.com/YourPS5.png') no-repeat;
+  width: 807px;   /* match your PNG’s dimensions */
+  height: 651px;
+  background-size: 100% 100%;
+  /* Hide default skin elements if needed */
 }
-
-/* 2. Draw your PNG as the page background, centered and contained */
-body {
-  background: url('https://raw.githubusercontent.com/Lxyke/game-pad/main/my_controller.png')
-    no-repeat center center !important;
-  background-size: contain !important;
-  margin: 0 !important;
-  height: 100vh !important;
-  background-color: black !important;
-}
+.controller.custom .quadrant { display: none; }  /* hides player-number badge */
