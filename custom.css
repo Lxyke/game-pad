@@ -1,17 +1,20 @@
-body {
-  background-color: black;
+/* Hide default GamepadViewer controller image */
+img.controller {
+  display: none !important;
 }
 
+/* Use your custom controller image */
 #controller {
-  background: url('my_controller.png') no-repeat center center;
+  background: url('https://lxyke.github.io/game-pad/my_controller.png') no-repeat center center;
   background-size: contain;
   width: 1000px;
   height: 600px;
   position: relative;
+  margin: 0 auto;
   image-rendering: pixelated;
 }
 
-img.controller {
-  display: none !important; /* Hides default image */
+/* Optional: dark background to match */
+body {
+  background-color: black;
 }
-
