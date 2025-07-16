@@ -154,7 +154,7 @@
 
 .ds4 .y {
     background-position: 55px 0;
-    left: 58px;
+    left: 56px; /* moved left 2px */
 }
 
 .ds4 .sticks {
@@ -194,7 +194,7 @@
     position: absolute;
     width: 125px;
     height: 126px;
-    top: 181px;
+    top: 190px; /* moved down by 9px */
     left: 92px;
 }
 
@@ -244,5 +244,4 @@
 .ds4.half {
     margin-top: -300px;
 }
-
 /*END PS4 Controller Styling*/
