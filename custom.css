@@ -1,5 +1,5 @@
 /* Container with your 800x800 controller PNG */
-.controller.custom {
+.controller {
   position: relative !important;
   width: 800px !important;
   height: 800px !important;
@@ -7,22 +7,25 @@
   background: url('https://lxyke.github.io/game-pad/my_controller.png') no-repeat center center !important;
   background-size: contain !important;
   image-rendering: pixelated !important;
+
+  /* TEMP DEBUG BORDER — remove after confirmed working */
+  border: 5px solid red !important;
 }
 
 /* Hide all default controller images and overlays */
-.controller.custom img,
-.controller.custom div {
+.controller img,
+.controller div {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
 }
 
 /* Show and position the sticks container */
-.controller.custom .sticks {
+.controller .sticks {
   display: block !important;
   position: absolute !important;
-  top: 460px;    /* Adjust this */
-  left: 230px;   /* Adjust this */
+  top: 460px;    /* Adjust this if needed */
+  left: 230px;   /* Adjust this if needed */
   width: 360px !important;
   height: 100px !important;
   visibility: visible !important;
@@ -30,7 +33,7 @@
 }
 
 /* Left stick */
-.controller.custom .stick.left {
+.controller .stick.left {
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
@@ -41,7 +44,7 @@
 }
 
 /* Right stick */
-.controller.custom .stick.right {
+.controller .stick.right {
   position: absolute !important;
   top: 6px !important;
   left: 266px !important;
@@ -52,11 +55,11 @@
 }
 
 /* D-pad container */
-.controller.custom .dpad {
+.controller .dpad {
   display: block !important;
   position: absolute !important;
-  top: 300px !important;   /* Adjust this */
-  left: 90px !important;   /* Adjust this */
+  top: 300px !important;   /* Adjust if needed */
+  left: 90px !important;   /* Adjust if needed */
   width: 125px !important;
   height: 125px !important;
   visibility: visible !important;
@@ -64,17 +67,17 @@
 }
 
 /* D-pad directions */
-.controller.custom .face.up    { position: absolute !important; top: 0 !important; left: 44px !important; width: 37px !important; height: 37px !important; }
-.controller.custom .face.down  { position: absolute !important; top: 88px !important; left: 44px !important; width: 37px !important; height: 37px !important; }
-.controller.custom .face.left  { position: absolute !important; top: 44px !important; left: 0 !important; width: 37px !important; height: 37px !important; }
-.controller.custom .face.right { position: absolute !important; top: 44px !important; left: 88px !important; width: 37px !important; height: 37px !important; }
+.controller .face.up    { position: absolute !important; top: 0 !important; left: 44px !important; width: 37px !important; height: 37px !important; }
+.controller .face.down  { position: absolute !important; top: 88px !important; left: 44px !important; width: 37px !important; height: 37px !important; }
+.controller .face.left  { position: absolute !important; top: 44px !important; left: 0 !important; width: 37px !important; height: 37px !important; }
+.controller .face.right { position: absolute !important; top: 44px !important; left: 88px !important; width: 37px !important; height: 37px !important; }
 
 /* Face buttons container */
-.controller.custom .abxy {
+.controller .abxy {
   display: block !important;
   position: absolute !important;
-  top: 320px !important;   /* Adjust this */
-  left: 570px !important;  /* Adjust this */
+  top: 320px !important;   /* Adjust if needed */
+  left: 570px !important;  /* Adjust if needed */
   width: 170px !important;
   height: 170px !important;
   visibility: visible !important;
@@ -82,28 +85,28 @@
 }
 
 /* Face buttons */
-.controller.custom .a {
+.controller .a {
   position: absolute !important;
   bottom: 0 !important;
   left: 58px !important;
   width: 50px !important;
   height: 50px !important;
 }
-.controller.custom .b {
+.controller .b {
   position: absolute !important;
   top: 58px !important;
   right: 0 !important;
   width: 50px !important;
   height: 50px !important;
 }
-.controller.custom .x {
+.controller .x {
   position: absolute !important;
   top: 58px !important;
   left: 0 !important;
   width: 50px !important;
   height: 50px !important;
 }
-.controller.custom .y {
+.controller .y {
   position: absolute !important;
   left: 58px !important;
   top: 0 !important;
@@ -112,8 +115,8 @@
 }
 
 /* Optional: hide back and start buttons */
-.controller.custom .back,
-.controller.custom .start {
+.controller .back,
+.controller .start {
   opacity: 0 !important;
   visibility: hidden !important;
   display: none !important;
