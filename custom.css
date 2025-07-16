@@ -1,5 +1,4 @@
-/* Container with your 800x800 controller PNG */
-.controller {
+.controller.custom {
   position: relative !important;
   width: 800px !important;
   height: 800px !important;
@@ -7,122 +6,29 @@
   background: url('https://lxyke.github.io/game-pad/my_controller.png') no-repeat center center !important;
   background-size: contain !important;
   image-rendering: pixelated !important;
-
-  /* TEMP DEBUG BORDER — remove after confirmed working */
-  border: 5px solid red !important;
 }
 
-/* Hide all default controller images and overlays */
-.controller img,
-.controller div {
+.controller.custom img,
+.controller.custom div {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
 }
 
-/* Show and position the sticks container */
-.controller .sticks {
+/* Then re-show only necessary interactive parts like sticks, buttons, dpad as needed */
+.controller.custom .sticks,
+.controller.custom .dpad,
+.controller.custom .abxy,
+.controller.custom .stick.left,
+.controller.custom .stick.right {
   display: block !important;
-  position: absolute !important;
-  top: 460px;    /* Adjust this if needed */
-  left: 230px;   /* Adjust this if needed */
-  width: 360px !important;
-  height: 100px !important;
   visibility: visible !important;
   opacity: 1 !important;
+  position: absolute !important;
 }
 
-/* Left stick */
-.controller .stick.left {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 94px !important;
-  height: 94px !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
+/* Adjust positions here as you like */
 
-/* Right stick */
-.controller .stick.right {
-  position: absolute !important;
-  top: 6px !important;
-  left: 266px !important;
-  width: 94px !important;
-  height: 94px !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* D-pad container */
-.controller .dpad {
-  display: block !important;
-  position: absolute !important;
-  top: 300px !important;   /* Adjust if needed */
-  left: 90px !important;   /* Adjust if needed */
-  width: 125px !important;
-  height: 125px !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* D-pad directions */
-.controller .face.up    { position: absolute !important; top: 0 !important; left: 44px !important; width: 37px !important; height: 37px !important; }
-.controller .face.down  { position: absolute !important; top: 88px !important; left: 44px !important; width: 37px !important; height: 37px !important; }
-.controller .face.left  { position: absolute !important; top: 44px !important; left: 0 !important; width: 37px !important; height: 37px !important; }
-.controller .face.right { position: absolute !important; top: 44px !important; left: 88px !important; width: 37px !important; height: 37px !important; }
-
-/* Face buttons container */
-.controller .abxy {
-  display: block !important;
-  position: absolute !important;
-  top: 320px !important;   /* Adjust if needed */
-  left: 570px !important;  /* Adjust if needed */
-  width: 170px !important;
-  height: 170px !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* Face buttons */
-.controller .a {
-  position: absolute !important;
-  bottom: 0 !important;
-  left: 58px !important;
-  width: 50px !important;
-  height: 50px !important;
-}
-.controller .b {
-  position: absolute !important;
-  top: 58px !important;
-  right: 0 !important;
-  width: 50px !important;
-  height: 50px !important;
-}
-.controller .x {
-  position: absolute !important;
-  top: 58px !important;
-  left: 0 !important;
-  width: 50px !important;
-  height: 50px !important;
-}
-.controller .y {
-  position: absolute !important;
-  left: 58px !important;
-  top: 0 !important;
-  width: 50px !important;
-  height: 50px !important;
-}
-
-/* Optional: hide back and start buttons */
-.controller .back,
-.controller .start {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  display: none !important;
-}
-
-/* Optional: page background color */
 body {
   background-color: black !important;
 }
