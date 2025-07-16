@@ -1,7 +1,17 @@
-.controller {
-  background-image: url('https://lxyke.github.io/game-pad/my_controller.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 1000px;
-  height: 500px;
+body {
+  background-color: black;
 }
+
+#controller {
+  background: url('my_controller.png') no-repeat center center;
+  background-size: contain;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+  image-rendering: pixelated;
+}
+
+img.controller {
+  display: none !important; /* Hides default image */
+}
+
