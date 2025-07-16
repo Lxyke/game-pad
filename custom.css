@@ -1,34 +1,41 @@
+/* Use your custom base controller image as the background */
 .controller.custom {
-  position: relative !important;
-  width: 800px !important;
-  height: 800px !important;
-  margin: 0 auto !important;
-  background: url('https://lxyke.github.io/game-pad/my_controller.png') no-repeat center center !important;
+  background: url('https://yourdomain.github.io/path/to/your_controller.png') no-repeat center center !important;
   background-size: contain !important;
-  image-rendering: pixelated !important;
+  width: 671px !important;  /* match your image size */
+  height: 452px !important;
+  position: relative !important;
+  margin: 0 auto !important;
 }
 
+/* Hide only the default base controller image (usually an <img> tag) */
+.controller.custom > img.controller {
+  display: none !important;
+}
+
+/* Do NOT hide the buttons, sticks, dpads, etc. — so they stay visible and animate */
+/* If you previously hid all images and divs like this, remove or comment out: */
+/*
 .controller.custom img,
 .controller.custom div {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
 }
+*/
 
-/* Then re-show only necessary interactive parts like sticks, buttons, dpad as needed */
-.controller.custom .sticks,
-.controller.custom .dpad,
-.controller.custom .abxy,
-.controller.custom .stick.left,
-.controller.custom .stick.right {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  position: absolute !important;
+/* Optionally, adjust positions of sticks, buttons, dpads to fit your custom base */
+.controller.custom .sticks {
+  top: 460px !important; /* adjust these values to fit your image */
+  left: 230px !important;
 }
 
-/* Adjust positions here as you like */
+.controller.custom .dpad {
+  top: 300px !important;
+  left: 90px !important;
+}
 
-body {
-  background-color: black !important;
+.controller.custom .abxy {
+  top: 320px !important;
+  left: 570px !important;
 }
