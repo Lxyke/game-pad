@@ -1,17 +1,12 @@
-/* Base controller with your 800x800 PNG */
+/*BEGIN PS4 Controller Styling*/
 .controller.ds4 {
-    background: url('https://imgur.com/gallery/controller-XtvYffn#g6l5YL6'); /* Your uploaded controller image */
-    height: 800px !important;  
-    width: 800px !important;   
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-    background-size: contain !important;
-    margin-left: 0 !important;
-    margin-top: 0 !important;
-    position: relative !important;
+    background: url('https://i.imgur.com/v4Y7lLt.png'); /* Your custom base controller image */
+    height: 598px;
+    width: 806px;
+    /*    margin-left: -403px;
+        margin-top: -280px;*/
 }
 
-/* Disconnected controller image - keep original or customize */
 .ds4.disconnected {
     background: url(https://imgur.com/Ng32O1o.png);
 }
@@ -20,7 +15,6 @@
     display: none;
 }
 
-/* Triggers container and triggers */
 .ds4 .triggers {
     width: 588px;
     height: 90px;
@@ -44,7 +38,6 @@
     background-position-x: 99px;
 }
 
-/* Bumpers */
 .ds4 .bumper {
     width: 99px;
     height: 23px;
@@ -73,7 +66,6 @@
     transform: rotateY(180deg);
 }
 
-/* Touchpad */
 .ds4 .touchpad {
     width: 262px;
     height: 151px;
@@ -86,7 +78,6 @@
     background: url(https://imgur.com/bAw0JK6.png) no-repeat center;
 }
 
-/* Meta button */
 .ds4 .meta {
     width: 42px;
     height: 42px;
@@ -99,7 +90,35 @@
     background: url(https://imgur.com/2TAywLD.png) no-repeat center;
 }
 
-/* Back and Start buttons */
+/*Not needed, but I like keeping them here for posterity*/
+/*.ds4 .quadrant{
+position: absolute;
+background: url(ps4-assets/player-n.svg);
+height: 17px;
+width: 111px;
+top: 140px;
+left: 240px;
+}
+.ds4 .p0{
+background-position: 0 -6px;
+}
+.ds4 .p1{
+background-position: 0 -28px;
+}
+.ds4 .p2{
+background-position: 0 -49px;
+}
+.ds4 .p3{
+background-position: 0 -70px;
+}*/
+.ds4 .arrows {
+    position: absolute;
+    width: 352px;
+    height: 46px;
+    top: 142px;
+    left: 227px;
+}
+
 .ds4 .back, .ds4 .start {
     background: url(https://imgur.com/s8zdOmr.png);
     width: 28px;
@@ -120,7 +139,6 @@
     background-position: 28px 0;
 }
 
-/* ABXY buttons container */
 .ds4 .abxy {
     position: absolute;
     width: 170px;
@@ -129,7 +147,6 @@
     left: 567px;
 }
 
-/* ABXY buttons */
 .ds4 .button {
     position: absolute;
     width: 55px;
@@ -163,7 +180,6 @@
     left: 58px;
 }
 
-/* Sticks container */
 .ds4 .sticks {
     position: absolute;
     width: 361px;
@@ -172,7 +188,6 @@
     left: 228px;
 }
 
-/* Sticks */
 .ds4 .stick {
     position: absolute;
     background: url(https://imgur.com/WM1PmtA.png);
@@ -198,7 +213,6 @@
     left: calc(100% - 105px);
 }
 
-/* D-pad container */
 .ds4 .dpad {
     position: absolute;
     width: 125px;
@@ -207,7 +221,6 @@
     left: 92px;
 }
 
-/* D-pad face buttons */
 .ds4 .face {
     background: url(https://imgur.com/JUJK0Z7.png);
     position: absolute;
@@ -251,7 +264,8 @@
     background-position-y: 52px;
 }
 
-/* Optional: page background */
-body {
-    background-color: black !important;
+.ds4.half {
+    margin-top: -300px;
 }
+
+/*END PS4 Controller Styling*/
